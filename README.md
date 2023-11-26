@@ -50,39 +50,53 @@ E2-RideKit provides various functions to perform calculations and augment datase
 **Usage**<br>
 To use E2-RideKit, run the main script with various command-line options. For example:
 
-Calculate deadhead miles
+- Calculate deadhead miles
+```bash
 e2ridekit_package -d -i input_dataset.csv -o output_dataset.csv
+```
 
- Calculate deadhead emissions
+- Calculate deadhead emissions
+```bash
 e2ridekit_package -de -i input_dataset.csv -o output_dataset.csv
+```
 
-Calculate traveled distance
+- Calculate traveled distance
+```bash
 e2ridekit_package -t -i input_dataset.csv -o output_dataset.csv
+```
 
- Calculate traveled emissions
+- Calculate traveled emissions
+```bash
 e2ridekit_package -te -i input_dataset.csv -o output_dataset.csv
+```
 
- Adjust emissions for Electric Vehicles (EVs)
+- Adjust emissions for Electric Vehicles (EVs)
+```bash
 e2ridekit_package -ev 20 63.35 -i input_dataset.csv -o output_dataset.csv
+```
 
-Filter trips by date range
+- Filter trips by date range
+```bash
 e2ridekit_package -i input_dataset.csv -o output_dataset.csv -sd 2016-06-04 -ed 2016-06-06
+```
 
- Get random samples of trips
+- Get random samples of trips
+```bash
 e2ridekit_package -i input_dataset.csv -o output_dataset.csv -n 10
+```
 
 
 
 **Dependencies**<br>
 E2-RideKit has the following dependencies:
-geographiclib==2.0
-geopy==2.3.0
-numpy==1.24.3
-pandas==2.0.2
-python-dateutil==2.8.2
-pytz==2023.3
-six==1.16.0
-tzdata==2023.3
+- geographiclib==2.0
+- geopy==2.3.0
+- numpy==1.24.3
+- pandas==2.0.2
+- python-dateutil==2.8.2
+- pytz==2023.3
+- six==1.16.0
+- tzdata==2023.3
 
 **Publication**<br>
 If you use E2-RideKit in an academic work, please consider citing our paper:
