@@ -1,10 +1,10 @@
-**E2-RideKit**
+**E2-RideKit**<br>
 E2-RideKit is a comprehensive toolkit designed to enhance ridesharing datasets with crucial information related to emissions and equity. It addresses the challenges faced in emission-aware ride assignment algorithms, making it a valuable contribution to the ridesharing research community.
 
-**Motivation**
+**Motivation**<br>
 Our work on developing emission-aware ride assignment algorithms necessitated ridesharing datasets to include carbon emission information for deadhead miles and individual trips, along with equity-related metrics on drivers and riders. Since no existing datasets contain such information, the E2-RideKit was developed to augment existing datasets, solving multiple challenges along the way.
 
-**Installation**
+**Installation**<br>
 To install E2-RideKit, follow these steps:
 
 1. Clone the repository:
@@ -26,7 +26,7 @@ To install E2-RideKit, follow these steps:
    pip install -e .
    ```
 
-**Data Requirements**
+**Data Requirements**<br>
 E2-RideKit requires the following data inputs:
 - Ridesharing Dataset (CSV): Contains information on individual rides, including start and end locations, timestamps, and driver/rider IDs.
 - Driver/Rider Dataset (CSV) (Optional): Contains additional information on all drivers and riders if available.
@@ -34,7 +34,7 @@ E2-RideKit requires the following data inputs:
 Ensure that your datasets have the required columns for the toolkit to perform the necessary augmentations.
 
 
-**Functions**
+**Functions**<br>
 E2-RideKit provides various functions to perform calculations and augment datasets:
 
 - calculate_Deadhead(trips): Calculates deadhead miles based on previous drop-off and current pick-up locations.
@@ -47,7 +47,7 @@ E2-RideKit provides various functions to perform calculations and augment datase
 - calculate_Distance(lat1, lon1, lat2, lon2): Calculates the great-circle distance between two points.
 
 
-**Usage**
+**Usage**<br>
 To use E2-RideKit, run the main script with various command-line options. For example:
 
 Calculate deadhead miles
@@ -73,7 +73,7 @@ e2ridekit_package -i input_dataset.csv -o output_dataset.csv -n 10
 
 
 
-**Dependencies**
+**Dependencies**<br>
 E2-RideKit has the following dependencies:
 geographiclib==2.0
 geopy==2.3.0
@@ -84,7 +84,7 @@ pytz==2023.3
 six==1.16.0
 tzdata==2023.3
 
-**Publication**
+**Publication**<br>
 If you use E2-RideKit in an academic work, please consider citing our paper:
 "A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms"
 
@@ -92,7 +92,7 @@ If you use E2-RideKit in an academic work, please consider citing our paper:
 For assistance or inquiries, you can reach out to Mahsa Sahebdel at msahebdelala@umass.edu. Please be patient as it may take a few hours to a day to respond.
 
 
-**Acknowledgments**
+**Acknowledgments**<br>
 This toolkit is developed as part of our work on emission-aware ride assignment algorithms.
 
 
