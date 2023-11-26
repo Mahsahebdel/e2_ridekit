@@ -1,0 +1,11 @@
+README.md
+setup.py
+e2ridekit_package/__init__.py
+e2ridekit_package/functions.py
+e2ridekit_package/main.py
+e2ridekit_package/test.py
+e2ridekit_package.egg-info/PKG-INFO
+e2ridekit_package.egg-info/SOURCES.txt
+e2ridekit_package.egg-info/dependency_links.txt
+e2ridekit_package.egg-info/entry_points.txt
+e2ridekit_package.egg-info/top_level.txt
