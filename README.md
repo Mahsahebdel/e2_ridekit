@@ -88,7 +88,7 @@ tzdata==2023.3
 If you use E2-RideKit in an academic work, please consider citing our paper:
 "A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms"
 
-**Help and Resources**
+**Help and Resources**<br>
 For assistance or inquiries, you can reach out to Mahsa Sahebdel at msahebdelala@umass.edu. Please be patient as it may take a few hours to a day to respond.
 
 
