@@ -12,7 +12,7 @@ Our work on developing emission-aware ride assignment algorithms necessitated ri
 
 ## Installation
 
-### For Unix-based Systems:
+### For Unix-based Systems/ Windows:
 
 1. Clone the repository:
    ```bash
@@ -31,28 +31,6 @@ Our work on developing emission-aware ride assignment algorithms necessitated ri
 
 4. Install the E2-RideKit Python package:
    ```bash
-   pip install -e .
-   ```
-
-### For Windows:
-
-1. Clone the repository:
-   ```cmd
-   git clone https://github.com/mahsahebdel/E2-rideKit.git
-   ```
-
-2. Navigate to the toolkit directory:
-   ```cmd
-   cd e2-ridekit
-   ```
-
-3. Install the required dependencies:
-   ```cmd
-   pip install -r requirements.txt
-   ```
-
-4. Install the E2-RideKit Python package:
-   ```cmd
    pip install -e .
    ```
 
