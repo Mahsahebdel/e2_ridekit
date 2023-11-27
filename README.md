@@ -60,48 +60,48 @@ E2-RideKit provides various functions to perform calculations and augment datase
 
 To use E2-RideKit, run the main script with various command-line options. For example:
 
-- Calculate deadhead miles
+- `-d`: this option computes deadhead miles, which refers to the distance traveled by a vehicle without passengers.
 ```bash
 
 e2ridekit_package -d -i input_dataset.csv -o output_dataset.csv
 ```
 
-- Calculate deadhead emissions
+- `-de`: calculates deadhead emissions, representing the emissions produced during the travel of a vehicle without passengers.
 
 ```bash
 
 e2ridekit_package -de -i input_dataset.csv -o output_dataset.csv
 ```
 
-- Calculate traveled distance
+- `-t`: calculates traveled distance, encompassing the entire distance covered during rides.
 
 ```bash
 
 e2ridekit_package -t -i input_dataset.csv -o output_dataset.csv
 ```
 
-- Calculate traveled emissions
+- `-te`: calculates traveled emissions, considering the distance covered with passengers.
 
 ```bash
 
 e2ridekit_package -te -i input_dataset.csv -o output_dataset.csv
 ```
 
-- Adjust emissions for Electric Vehicles (EVs)
+- `-ev`: adjusts emissions for Electric Vehicles (EVs). This option configures settings for electric vehicles, including the percentage of electric vehicles in the dataset and the location-based grid intensity value.
 
 ```bash
 
 e2ridekit_package -ev 20 63.35 -i input_dataset.csv -o output_dataset.csv
 ```
 
-- Filter trips by date range
+- `-sd` and `-ed`: specifies the start date and end date respectively for filtering the dataset. Trips before start date and after end date will be excluded from the calculations. 
 
 ```bash
 
 e2ridekit_package -i input_dataset.csv -o output_dataset.csv -sd 2016-06-04 -ed 2016-06-06
 ```
 
-- Get random samples of trips
+- `-n`: determines the number of random samples to retrieve from the dataset for analysis.
 
 ```bash
 
@@ -125,7 +125,8 @@ E2-RideKit has the following dependencies:
 ## Publication
 
 If you use E2-RideKit in an academic work, please consider citing our paper:  
-"A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms"
+A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms; Mahsa Sahebdel, Ali Zeynali, Noman Bashir, Prashant Shenoy, Mohammad Hajiesmaili.
+[e-Energy 2024]
 
 ## Help and Resources
 
