@@ -27,7 +27,8 @@ def main():
     parser.add_argument('-ev', nargs=2, type=float, help='Electric vehicle settings: percentage grid_intensity')
     parser.add_argument('-sd', '--start-date', type=str, help='Start date in YYYY-MM-DD format')
     parser.add_argument('-ed', '--end-date', type=str, help='End date in YYYY-MM-DD format')
-    parser.add_argument('-n', '--num-samples', type=int, help='Number of random samples to get')
+    parser.add_argument('-nd', '--num-drivers', type=int, help='Number of random drivers to select')
+    parser.add_argument('-n', '--num-samples-per-driver', type=int, help='Number of random samples per driver to get')
 
     args = parser.parse_args()
 
@@ -68,8 +69,10 @@ def main():
     if args.start_date and args.end_date:
         trips = filter_trips_by_date(trips, args.start_date, args.end_date)
 
-    if args.num_samples:
-        trips = get_random_samples(trips, args.num_samples)
+    if args.num_drivers and args.num_samples_per_driver:
+        trips = get_random_samples(trips, args.num_drivers, args.num_samples_per_driver)
+    else:
+        print("Please provide both the number of drivers (-d) and the number of samples per driver (-n).")
 
     trips.to_csv(args.output, index=False)
     print("Calculations completed. Results saved to:", args.output)

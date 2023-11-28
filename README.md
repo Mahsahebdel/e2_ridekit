@@ -88,24 +88,24 @@ e2ridekit_package -ev 20 63.35 -i input_dataset.csv -o output_dataset.csv
 e2ridekit_package -i input_dataset.csv -o output_dataset.csv -sd 2016-06-04 -ed 2016-06-06
 ```
 
-- `-n`: determines the number of random samples to retrieve from the dataset for analysis.
+- `-nd` and `-n`: specifies the number of random drivers to select, and  the number of random samples per selected driver to retrieve. 
 
 ```bash
 
-e2ridekit_package -i input_dataset.csv -o output_dataset.csv -n 10
+e2ridekit_package -i input_dataset.csv -o output_dataset.csv -nd 5 -n 10
 ```
 
 ## Functions
 
 E2-RideKit provides various functions to perform calculations and augment datasets:
 
-- `calculate_Deadhead(trips)`: Calculates deadhead miles based on previous drop-off and current pick-up locations.
-- `calculate_deadheadEmission(trips)`: Calculates deadhead emissions based on deadhead miles and emission factor.
-- `calculate_traveledEmission(trips)`: Calculates emissions during the actual trip based on traveled distance and emission factor.
-- `calculate_ev_metrics(trips, ev_percentage, grid_intensity)`: The function facilitates emissions adjustments for Electric Vehicles (EVs). This command allows you to configure settings for electric vehicles, specifying both the percentage of electric vehicles in the dataset (`ev_percentage`) and the location-based grid intensity value. By using this option, the function randomly selects the specified percentage of unique drivers from the dataset to represent EV drivers. For these selected EV drivers, you can define the emission equivalent for unit distance based on location, such as using values like 63.35 g.CO2eq/km. This incorporates the average carbon intensity specific to Austin, Texas, enabling the simulation of emission adjustments for a proportion of the vehicle fleet transitioning to Electric Vehicles within the provided dataset.
-- `filter_trips_by_date(trips, start_date, end_date)`: Filters trips based on a specified date range.
-- `get_random_samples(trips, num_samples)`: Retrieves a random sample of trips from the dataset.
-- `calculate_Distance(lat1, lon1, lat2, lon2)`: Calculates the great-circle distance between two points.
+- `calculate_Deadhead(trips)`: calculates deadhead miles based on previous drop-off and current pick-up locations.
+- `calculate_deadheadEmission(trips)`: calculates deadhead emissions based on deadhead miles and emission factor.
+- `calculate_traveledEmission(trips)`: calculates emissions during the actual trip based on traveled distance and emission factor.
+- `calculate_ev_metrics(trips, ev_percentage, grid_intensity)`: the function facilitates emissions adjustments for Electric Vehicles (EVs). This command allows you to configure settings for electric vehicles, specifying both the percentage of electric vehicles in the dataset (`ev_percentage`) and the location-based grid intensity value. By using this option, the function randomly selects the specified percentage of unique drivers from the dataset to represent EV drivers. For these selected EV drivers, you can define the emission equivalent for unit distance based on location, such as using values like 63.35 g.CO2eq/km. This incorporates the average carbon intensity specific to Austin, Texas, enabling the simulation of emission adjustments for a proportion of the vehicle fleet transitioning to Electric Vehicles within the provided dataset.
+- `filter_trips_by_date(trips, start_date, end_date)`: filters trips based on a specified date range.
+- `get_random_samples(trips, num_drivers, num_samples_per_driver)`: retrieves a random sample of trips from the dataset. Retrieves a random sample of trips from the dataset. This function takes two parameters: number of random drivers to select from the dataset, and the number of random samples per selected driver to retrieve from the dataset.
+- `calculate_Distance(lat1, lon1, lat2, lon2)`: calculates the great-circle distance between two points.
 
 
 ## Dependencies

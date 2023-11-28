@@ -36,8 +36,22 @@ def filter_trips_by_date(trips, start_date, end_date):
     return selected_trips
 
 
-def get_random_samples(trips, num_samples):
-    random_samples = trips.sample(num_samples)
+def get_random_samples(trips, num_drivers, num_samples_per_driver):
+    unique_drivers = trips['driver_id'].unique()
+
+    if num_drivers > len(unique_drivers):
+        raise ValueError("Number of drivers requested exceeds the unique drivers in the dataset.")
+
+    selected_drivers = pd.Series(unique_drivers).sample(num_drivers, random_state=42)
+
+    random_samples = pd.DataFrame()
+
+    for driver in selected_drivers:
+        driver_samples = trips[trips['driver_id'] == driver].sample(num_samples_per_driver, replace=True)
+        random_samples = pd.concat([random_samples, driver_samples], ignore_index=True)
+
+    random_samples = random_samples.sample(frac=1, random_state=42).reset_index(drop=True)
+
     return random_samples
 
 
@@ -66,5 +80,3 @@ def calculate_Deadhead(trips):
     print("Number of drivers: {0}".format(num_drivers))
 
     return rows
-
-
