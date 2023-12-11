@@ -50,49 +50,49 @@ To use E2-RideKit, run the main script with various command-line options. For ex
 - `-d`: this option computes deadhead miles, which refers to the distance traveled by a vehicle without passengers.
 ```bash
 
-e2ridekit_package -d -i input_dataset.csv -o output_dataset.csv
+e2ridekit_package -d -i sample_dataset.csv -o output_dataset.csv
 ```
 
 - `-de`: calculates deadhead emissions, representing the emissions produced during the travel of a vehicle without passengers.
 
 ```bash
 
-e2ridekit_package -de -i input_dataset.csv -o output_dataset.csv
+e2ridekit_package -de -i sample_dataset.csv -o output_dataset.csv
 ```
 
 - `-t`: calculates trip distance, encompassing the entire distance covered during rides.
 
 ```bash
 
-e2ridekit_package -t -i input_dataset.csv -o output_dataset.csv
+e2ridekit_package -t -i sample_dataset.csv -o output_dataset.csv
 ```
 
 - `-te`: calculates trip emissions, considering the distance covered with passengers.
 
 ```bash
 
-e2ridekit_package -te -i input_dataset.csv -o output_dataset.csv
+e2ridekit_package -te -i sample_dataset.csv -o output_dataset.csv
 ```
 
 - `-ev`: adjusts emissions for Electric Vehicles (EVs). To use this option, provide two inputs in order: the EV percentage, indicating the proportion of drivers with electric vehicles, and the grid intensity, a location-based value influencing emissions.
 
 ```bash
 
-e2ridekit_package -ev 20 63.35 -i input_dataset.csv -o output_dataset.csv
+e2ridekit_package -ev 20 63.35 -i sample_dataset.csv -o output_dataset.csv
 ```
 
 - `-sd` and `-ed`: specifies the start date and end date respectively for filtering the dataset. Trips before start date and after end date will be excluded from the calculations. 
 
 ```bash
 
-e2ridekit_package -i input_dataset.csv -o output_dataset.csv -sd 2016-06-04 -ed 2016-06-06
+e2ridekit_package -i sample_dataset.csv -o output_dataset.csv -sd 2016-06-04 -ed 2016-06-06
 ```
 
 - `-nd` and `-n`: specifies the number of random drivers to select, and  the number of random samples per selected driver to retrieve. 
 
 ```bash
 
-e2ridekit_package -i input_dataset.csv -o output_dataset.csv -nd 5 -n 10
+e2ridekit_package -i sample_dataset.csv -o output_dataset.csv -nd 5 -n 10
 ```
 
 ## Functions
@@ -126,6 +126,16 @@ E2-RideKit has the following dependencies:
 If you use E2-RideKit in an academic work, please consider citing our paper:  
 A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms; Mahsa Sahebdel, Ali Zeynali, Noman Bashir, Prashant Shenoy, Mohammad Hajiesmaili.
 [e-Energy 2024]
+
+The BibTex citation is given below.
+
+@inproceedings{sahebdel2024holistic,
+  title={A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms},
+  author={Sahebdel, Mahsa and Zeynali, Ali and Bashir, Noman and Shenoy, Prashant and Hajiesmaili, Mohammad},
+  booktitle={Proceedings of the [e-Energy 2024]},
+  year={2024}
+}
+
 
 ## Help and Resources
 
