@@ -8,5 +8,6 @@ setup(
         'console_scripts': [
             'e2ridekit_package = e2ridekit_package.main:main'
         ]
-    }
+    },
+    license='CC BY-NC 4.0',
 )
