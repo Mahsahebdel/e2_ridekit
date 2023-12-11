@@ -129,10 +129,10 @@ A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms; 
 
 The BibTex citation is given below.
 
-@inproceedings{sahebdel2024holistic,
-  title={A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms},
-  author={Sahebdel, Mahsa and Zeynali, Ali and Bashir, Noman and Shenoy, Prashant and Hajiesmaili, Mohammad},
-  booktitle={Proceedings of the [e-Energy 2024]},
+@inproceedings{sahebdel2024holistic,<br>
+  title={A Holistic Approach for Equity-aware Carbon Reduction of Ridesharing Platforms},<br>
+  author={Sahebdel, Mahsa and Zeynali, Ali and Bashir, Noman and Shenoy, Prashant and Hajiesmaili, Mohammad},<br>
+  booktitle={Proceedings of the [e-Energy 2024]},<br>
   year={2024}
 }
 
